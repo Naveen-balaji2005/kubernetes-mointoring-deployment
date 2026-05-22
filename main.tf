@@ -263,7 +263,11 @@ resource "aws_instance" "web" {
 
       "sudo kubectl get svc -A",
 
-      "sudo kubectl get pods -A"
+      "sudo kubectl get pods -A",
+     
+      #kubernets node token
+
+      "sudo cat /var/lib/rancher/k3s/server/node-token"
     ]
   }
   tags = {
